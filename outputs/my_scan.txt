@@ -1,0 +1,12 @@
+Vulnerability Scan Report
+=========================
+
+Target URL      : https://example.com
+Scan Type       : SQLXSS
+Scan Depth      : 2
+
+SQLI Results:
+  1. SQLi vulnerability found in parameter 'id'
+
+XSS Results:
+  1. XSS vulnerability found in comment section
