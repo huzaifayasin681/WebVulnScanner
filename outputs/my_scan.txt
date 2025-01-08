@@ -1,12 +1,9 @@
 Vulnerability Scan Report
 =========================
 
-Target URL      : https://example.com
-Scan Type       : SQLXSS
+Target URL      : https://itsecgames.blogspot.com
+Scan Type       : SQLI
 Scan Depth      : 2
 
 SQLI Results:
-  1. SQLi vulnerability found in parameter 'id'
-
-XSS Results:
-  1. XSS vulnerability found in comment section
+  No vulnerabilities found.

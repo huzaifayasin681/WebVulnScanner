@@ -1,13 +1,8 @@
 {
-    "target_url": "https://example.com",
-    "scan_type": "sqlxss",
+    "target_url": "https://itsecgames.blogspot.com",
+    "scan_type": "sqli",
     "depth": 2,
     "results": {
-        "sqli": [
-            "SQLi vulnerability found in parameter 'id'"
-        ],
-        "xss": [
-            "XSS vulnerability found in comment section"
-        ]
+        "sqli": []
     }
 }

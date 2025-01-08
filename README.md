@@ -17,5 +17,5 @@
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/yourusername/WebVulnScanner.git
+   git clone https://github.com/huzaifaysain681/WebVulnScanner.git
    cd WebVulnScanner
