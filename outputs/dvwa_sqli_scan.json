@@ -1,0 +1,8 @@
+{
+    "target_url": "http://localhost/dvwa/vulnerabilities/sqli/?id=1&Submit=Submit#",
+    "scan_type": "sqli",
+    "depth": 1,
+    "results": {
+        "sqli": []
+    }
+}

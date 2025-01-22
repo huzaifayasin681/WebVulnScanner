@@ -1,0 +1,9 @@
+Vulnerability Scan Report
+=========================
+
+Target URL      : https://www.daraz.pk/#?
+Scan Type       : SQLI
+Scan Depth      : 1
+
+SQLI Results:
+  No vulnerabilities found.
