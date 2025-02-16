@@ -1,13 +1,8 @@
 {
-    "target_url": "https://example.com",
-    "scan_type": "sqlxss",
-    "depth": 2,
+    "target_url": "https://0afe00e903a60cb780ddb707008a00e1.web-security-academy.net/filter?category=Clothing%2c+shoes+and+accessories",
+    "scan_type": "sqli",
+    "depth": 3,
     "results": {
-        "sqli": [
-            "SQLi vulnerability found in parameter 'id'"
-        ],
-        "xss": [
-            "XSS vulnerability found in comment section"
-        ]
+        "sqli": []
     }
 }

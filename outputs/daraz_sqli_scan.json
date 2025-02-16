@@ -1,8 +1,0 @@
-{
-    "target_url": "https://www.daraz.pk/#?",
-    "scan_type": "sqli",
-    "depth": 1,
-    "results": {
-        "sqli": []
-    }
-}

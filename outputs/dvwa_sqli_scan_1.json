@@ -1,8 +1,0 @@
-{
-    "target_url": "http://localhost/dvwa/vulnerabilities/sqli",
-    "scan_type": "sqli",
-    "depth": 1,
-    "results": {
-        "sqli": []
-    }
-}

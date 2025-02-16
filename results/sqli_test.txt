@@ -1,9 +1,0 @@
-Console Output:
-Results summary here...
-
-Results Summary:
---------------------
-target_url: http://localhost/dvwa/vulnerabilities/sqli/?id=123&Submit=Submit#
-scan_type: sqli
-depth: 1
-results: {'sqli': []}

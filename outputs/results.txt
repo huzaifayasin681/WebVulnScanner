@@ -1,12 +1,9 @@
-Vulnerability Scan Report
-=========================
+Console Output:
+Results summary here...
 
-Target URL      : https://example.com
-Scan Type       : SQLXSS
-Scan Depth      : 2
-
-SQLI Results:
-  1. SQLi vulnerability found in parameter 'id'
-
-XSS Results:
-  1. XSS vulnerability found in comment section
+Results Summary:
+--------------------
+target_url: https://0afe00e903a60cb780ddb707008a00e1.web-security-academy.net/filter?category=Clothing%2c+shoes+and+accessories
+scan_type: sqli
+depth: 3
+results: {'sqli': []}

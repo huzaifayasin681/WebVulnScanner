@@ -1,9 +1,0 @@
-Vulnerability Scan Report
-=========================
-
-Target URL      : https://itsecgames.blogspot.com
-Scan Type       : SQLI
-Scan Depth      : 2
-
-SQLI Results:
-  No vulnerabilities found.

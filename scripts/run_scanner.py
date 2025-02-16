@@ -1,4 +1,6 @@
 import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from utils.arguments import parse_arguments
 from utils.file_io import save_results_to_json, save_results_to_text, ensure_output_dir
 from utils.validator import is_valid_url

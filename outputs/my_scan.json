@@ -1,8 +1,0 @@
-{
-    "target_url": "https://itsecgames.blogspot.com",
-    "scan_type": "sqli",
-    "depth": 2,
-    "results": {
-        "sqli": []
-    }
-}

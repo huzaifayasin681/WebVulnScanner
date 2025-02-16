@@ -1,9 +1,0 @@
-Vulnerability Scan Report
-=========================
-
-Target URL      : http://localhost/dvwa/vulnerabilities/sqli/?id=1&Submit=Submit#
-Scan Type       : SQLI
-Scan Depth      : 1
-
-SQLI Results:
-  No vulnerabilities found.
