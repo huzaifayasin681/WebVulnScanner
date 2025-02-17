@@ -1,3 +1,6 @@
+### forms.py
+
+# Handles form extraction from HTML content
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 

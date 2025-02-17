@@ -116,12 +116,3 @@ def get_random_payloads(sql_payloads: Dict = SQL_PAYLOADS, num_payloads: int = 5
     # Shuffle final results to mix categories
     random.shuffle(selected_payloads)
     return selected_payloads
-
-
-# Example usage
-if __name__ == "__main__":
-    # Get 5 random payloads
-    random_payloads = get_random_payloads()
-    print("Randomly Selected Payloads:")
-    for payload in random_payloads:
-        print(payload)
